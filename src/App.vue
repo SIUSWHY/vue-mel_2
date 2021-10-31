@@ -18,7 +18,7 @@ import Header from "./components/Header/index.vue"
     Header,
   },
 })
-export default class Home extends Vue { }
+export default class App extends Vue { }
 </script>
 
 <style lang="scss">
