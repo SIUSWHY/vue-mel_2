@@ -82,7 +82,7 @@ async function run() {
   app.post('/login', loginController)
 
   //register
-  app.post('/register', async function(req, res) {
+  app.post('/register', async function (req, res) {
     const errors = await validation(req)
     if (errors.length !== 0) {
       return res.send({
