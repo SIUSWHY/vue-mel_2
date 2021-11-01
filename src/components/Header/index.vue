@@ -33,6 +33,7 @@
         />
         <login v-show="isLoginModalVisible" @close="closeLoginModal" />
       </div>
+      <!-- <Registre /> -->
     </div>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <CardsGallery />
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -12,13 +13,15 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Header from "./components/Header/index.vue";
+import CardsGallery from "./components/CardsGallery/index.vue";
 
 @Component({
   components: {
     Header,
+    CardsGallery,
   },
 })
-export default class App extends Vue { }
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
