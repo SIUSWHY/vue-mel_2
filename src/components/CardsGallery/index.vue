@@ -1,5 +1,11 @@
 <template>
-  <div>OLOLO</div>
+  <div>
+    <NewsCard
+      v-for="post in $store.state.posts"
+      :key="post._id"
+      :card_news="post"
+    />
+  </div>
 </template>
 
 <script lang="ts" src="./index.ts" />

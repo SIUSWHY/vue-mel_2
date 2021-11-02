@@ -60,7 +60,7 @@ async function run() {
   )
 
   //get cards
-  app.get('/cards', verifyToken, async (req, res) => {
+  app.get('/cards', async (req, res) => {
     const cards = await Cards.find()
     if (req.query.sort) {
       const key = req.query.sort

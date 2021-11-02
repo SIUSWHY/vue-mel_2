@@ -13,25 +13,16 @@
       <div class="l-nav-b_position">
         <div>
           <input class="search-b" type="text" placeholder="  Ищите статью?" />
-          <font-awesome-icon icon="search" />
+          <!-- <font-awesome-icon icon="search" /> -->
         </div>
-        <a class="type-list-right-menu" @click="showCreateCardModal"
+        <a class="type-list-right-menu"
           >НАПИСАТЬ В БЛОГ
-          <font-awesome-icon icon="pencil-alt" />
+          <!-- <font-awesome-icon icon="pencil-alt" /> -->
         </a>
-        <createCardModal
-          v-show="isCreateCardVisible"
-          @close="closeCreateCardModal"
-        />
-        <button class="si-up_b-style" type="button" @click="showModal">
-          Sing Up
-        </button>
-        <modal
-          v-show="isModalVisible"
-          @close="closeModal"
-          @showLoginModal="showLoginModal"
-        />
-        <login v-show="isLoginModalVisible" @close="closeLoginModal" />
+        <!-- <createCardModal /> -->
+        <button class="si-up_b-style" type="button">Sing Up</button>
+        <!-- <modal /> -->
+        <!-- <login /> -->
       </div>
       <!-- <Registre /> -->
     </div>
