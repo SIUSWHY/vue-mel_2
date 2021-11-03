@@ -4,6 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import Vuelidate from "vuelidate";
+// const env = process.env;
 
 Vue.use(Vuelidate);
 

@@ -1,16 +1,14 @@
 import Vue from "vue";
-import cardsApi from "@/api/getCards/index";
+// import cardsApi from "@/api/getCards/index";
 import NewsCard from "./NewsCard/index.vue";
 import Component from "vue-class-component";
-// import { State, Getter, Action, Mutation, namespace } from "vuex-class";
-import Vuex from "vuex";
+import store from "@/store";
 
 // вызвать в сторе в экшенах,
-console.log(cardsApi.getCards());
+// console.log(cardsApi.getCards());
 
 // вызываешь loadData
-// Action.loadData();
-// Store.actions;
+store.dispatch("loadData");
 
 @Component({
   components: {
@@ -18,7 +16,9 @@ console.log(cardsApi.getCards());
   },
 })
 export default class CardsGallery extends Vue {
-  public mounted() {
-    return Vuex.Store.dispatch("loadData");
+  async mounted(): Promise<void> {
+    await store.dispatch("loadData");
+
+    console.log(this.$store);
   }
 }
