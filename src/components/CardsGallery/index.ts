@@ -8,7 +8,7 @@ import store from "@/store";
 // console.log(cardsApi.getCards());
 
 // вызываешь loadData
-store.dispatch("loadData");
+// store.dispatch("loadData");
 
 @Component({
   components: {
@@ -19,6 +19,6 @@ export default class CardsGallery extends Vue {
   async mounted(): Promise<void> {
     await store.dispatch("loadData");
 
-    console.log(this.$store);
+    // console.log(this.$store);
   }
 }
