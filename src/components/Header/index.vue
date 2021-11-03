@@ -24,7 +24,7 @@
         <!-- <modal /> -->
         <!-- <login /> -->
       </div>
-      <!-- <Registre /> -->
+      <Registre />
     </div>
   </div>
 </template>
