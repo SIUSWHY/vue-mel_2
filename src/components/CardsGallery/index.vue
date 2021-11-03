@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex">
     <NewsCard
       v-for="post in $store.state.posts"
       :key="post._id"

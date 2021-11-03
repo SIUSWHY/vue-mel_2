@@ -15,14 +15,14 @@
         </div>
         <div class="counts_position">
           <!-- <div class="date_style">{{ card_news.newDate }}</div> -->
-          <div>
+          <!-- <div>
             <div class="view_count_style">
               <font-awesome-icon icon="heart" /> {{ card_news.viewCount }}
             </div>
             <div class="comment_count_style">
               <font-awesome-icon icon="comment" /> {{ card_news.commentCount }}
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

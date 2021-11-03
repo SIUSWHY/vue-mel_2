@@ -1,3 +1,9 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  background-color: hsl(0, 0%, 95%);
+}
 .login-btn_decor {
   color: #8453d2;
   text-decoration: underline;
