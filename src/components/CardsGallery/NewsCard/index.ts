@@ -4,6 +4,7 @@ import { Component, Prop } from "vue-property-decorator";
 @Component
 export default class NewsCard extends Vue {
   @Prop(Object) private card_news!: Record<string, any>;
+
   // ПРОП card_news типа Обжект
   // карточка
   // или

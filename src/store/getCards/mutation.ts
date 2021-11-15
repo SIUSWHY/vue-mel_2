@@ -1,8 +1,8 @@
 import { MutationTree } from "vuex";
-import { BlogState } from "../types";
+import { BlogState, CardValue } from "../types";
 
 export const mutations: MutationTree<BlogState> = {
-  getPosts(state, posts: BlogState) {
+  getPosts(state, posts: CardValue) {
     state.posts = posts;
   },
 };

@@ -5,10 +5,11 @@ export interface CardValue {
   text: string;
   viewCount: number;
   commentCount: number;
+  newDate: string;
 }
 
 export interface BlogState {
-  posts: CardValue[];
+  posts: CardValue;
   error: string;
   loading: boolean;
 }

@@ -1,7 +1,10 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <div
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <!-- <div
         @submit.prevent="sendData"
         class="modal"
         role="dialog"
@@ -15,7 +18,6 @@
           </div>
           <div class="g-tab__content">
             <div class="bottom-margin-input-lable">
-              <!-- <div class="b-auth-email__input-label">Имя пользователя</div> -->
               <div>
                 <input
                   v-model.trim="$v.username.$model"
@@ -37,7 +39,6 @@
               </div>
             </div>
             <div class="bottom-margin-input-lable">
-              <!-- <div class="b-auth-email__input-label">Имя</div> -->
               <div>
                 <input
                   v-model.trim="$v.name.$model"
@@ -58,7 +59,6 @@
               </div>
             </div>
             <div class="bottom-margin-input-lable">
-              <!-- <div class="b-auth-email__input-label">E-mail</div> -->
               <div>
                 <input
                   v-model.trim="$v.email.$model"
@@ -75,7 +75,6 @@
               </div>
             </div>
             <div class="bottom-margin-input-lable">
-              <!-- <div class="b-auth-email__input-label">Пароль</div> -->
               <div>
                 <input
                   v-model.trim="$v.password.$model"
@@ -96,7 +95,6 @@
               type="button"
               @click="
                 () => {
-                  showLoginModal();
                   close();
                 }
               "
@@ -121,7 +119,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </transition>
 </template>

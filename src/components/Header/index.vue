@@ -20,8 +20,10 @@
           <!-- <font-awesome-icon icon="pencil-alt" /> -->
         </a>
         <!-- <createCardModal /> -->
-        <button class="si-up_b-style" type="button">Sing Up</button>
-        <!-- <modal /> -->
+        <button class="si-up_b-style" type="button" @click="showModal">
+          Sing Up
+        </button>
+        <modal v-show="isModalVisible" @close="closeModal" />
         <!-- <login /> -->
       </div>
       <!-- <Registre /> -->
