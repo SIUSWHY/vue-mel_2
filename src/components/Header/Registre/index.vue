@@ -1,10 +1,7 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <!-- <div
+      <div
         @submit.prevent="sendData"
         class="modal"
         role="dialog"
@@ -119,7 +116,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </transition>
 </template>

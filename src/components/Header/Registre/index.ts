@@ -1,9 +1,15 @@
 import Vue from "vue";
 import Component from "vue-class-component";
+import Vuelidate from "vuelidate";
 
 @Component
 export default class Register extends Vue {
-  data() {
+  data(): {
+    username: string;
+    name: string;
+    email: string;
+    password: string;
+  } {
     return {
       username: "SIUSWHY",
       name: "Даниил",

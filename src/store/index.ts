@@ -4,10 +4,12 @@ import cardsApi from "@/api/getCards/index";
 
 Vue.use(Vuex);
 
+const state = { posts: [] };
+
 export default new Vuex.Store<{
   posts: Array<Record<string, any>>;
 }>({
-  state: { posts: [] },
+  state: state,
   mutations: {
     getPosts(state, posts) {
       state.posts = posts;
