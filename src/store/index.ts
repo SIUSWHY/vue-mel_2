@@ -1,28 +1,30 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import cardsApi from "@/api/getCards/index";
+// import cardsApi from "@/api/getCards/index";
+import { Cards } from "./getCards/index";
+import { RootState } from "./types";
 
 Vue.use(Vuex);
 
 const state = { posts: [] };
 
-export default new Vuex.Store<{
-  posts: Array<Record<string, any>>;
-}>({
-  state: state,
+export default new Vuex.Store<RootState>({
+  state: {},
   mutations: {
-    getPosts(state, posts) {
-      state.posts = posts;
-    },
+    // getPosts(state, posts) {
+    //   state.posts = posts;
+    // },
     // ADD_NEW_NEWSCARD: (state, data) => {
     //   state.posts.push(data);
     // },
   },
   actions: {
-    async loadData({ commit }) {
-      const { data: cards } = await cardsApi.getCards();
-      commit("getPosts", cards);
-    },
+    //   async loadData({ commit }) {
+    //     const { data: cards } = await cardsApi.getCards();
+    //     commit("getPosts", cards);
+    //   },
   },
-  modules: {},
+  modules: {
+    Cards,
+  },
 });

@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Component from "vue-class-component";
-import Vuelidate from "vuelidate";
 
 @Component
 export default class Register extends Vue {

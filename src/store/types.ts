@@ -9,7 +9,10 @@ export interface CardValue {
 }
 
 export interface BlogState {
-  posts: CardValue;
+  posts: Array<CardValue>;
   error: string;
   loading: boolean;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface RootState {}
