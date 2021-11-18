@@ -10,7 +10,7 @@ export interface CardValue {
 
 export interface BlogState {
   posts: Array<CardValue>;
-  error: string;
+  error: null | any;
   loading: boolean;
 }
 

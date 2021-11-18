@@ -2,7 +2,7 @@
   <div class="center">
     <div class="flex">
       <NewsCard
-        v-for="post in $store.state.Cards.posts"
+        v-for="post in $store.state.cards.posts"
         :key="post._id"
         :card_news="post"
       />
