@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <CardsGallery />
+    <PageBar />
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -14,11 +15,13 @@
 import { Component, Vue } from "vue-property-decorator";
 import Header from "./components/Header/index.vue";
 import CardsGallery from "./components/CardsGallery/index.vue";
+import PageBar from "./components/Pagination/index.vue";
 
 @Component({
   components: {
     Header,
     CardsGallery,
+    PageBar,
   },
 })
 export default class App extends Vue {}
