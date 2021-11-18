@@ -2,7 +2,6 @@ import Vue from "vue";
 // import cardsApi from "@/api/getCards/index";
 import NewsCard from "./NewsCard/index.vue";
 import Component from "vue-class-component";
-import store from "@/store";
 
 // вызвать в сторе в экшенах,
 // console.log(cardsApi.getCards());
@@ -17,7 +16,7 @@ import store from "@/store";
 })
 export default class CardsGallery extends Vue {
   async mounted(): Promise<void> {
-    await store.dispatch("loadData");
+    await this.$store.dispatch("Cards/loadData");
 
     // console.log(this.$store);
   }
