@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <VueTailwindPagination
+  <div style="background-color: #f2f2f2">
+    <sliding-pagination
       :current="currentPage"
-      :total="total"
-      :per-page="perPage"
-      @page-changed="current = $event"
+      :total="totalPages"
+      @page-change="pageChangeHandler"
     />
   </div>
 </template>
