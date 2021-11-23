@@ -9,9 +9,10 @@ export interface CardValue {
 }
 
 export interface BlogState {
-  posts: Array<CardValue>;
+  posts: CardValue[];
   error: null | any;
   loading: boolean;
+  page: number;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
