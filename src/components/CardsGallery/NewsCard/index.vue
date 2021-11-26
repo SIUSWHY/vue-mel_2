@@ -14,7 +14,6 @@
           {{ card_news.text }}
         </div>
         <div class="counts_position">
-          <!-- <div class="date_style">{{ card_news.newDate }}</div> -->
           <div>
             <div class="view_count_style">
               <font-awesome-icon icon="heart" /> {{ card_news.viewCount }}

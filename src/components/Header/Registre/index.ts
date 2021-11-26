@@ -14,7 +14,9 @@ export default class Register extends Vue {
       name: "Даниил",
       email: "ventsodaniil@yandex.ru",
       password: "123qweQWE",
-      // isLoginModalVisible: false,
     };
+  }
+  private close() {
+    this.$emit("close");
   }
 }

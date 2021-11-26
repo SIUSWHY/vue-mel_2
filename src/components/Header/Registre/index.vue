@@ -17,6 +17,7 @@
             <div class="bottom-margin-input-lable">
               <div>
                 <input
+                  v-model="username"
                   id="username"
                   class="g-input__input"
                   type="text"
@@ -27,6 +28,7 @@
             <div class="bottom-margin-input-lable">
               <div>
                 <input
+                  v-model="name"
                   id="name"
                   class="g-input__input"
                   type="text"
@@ -37,6 +39,7 @@
             <div class="bottom-margin-input-lable">
               <div>
                 <input
+                  v-model="email"
                   id="email"
                   class="g-input__input"
                   type="text"
@@ -47,6 +50,7 @@
             <div class="bottom-margin-input-lable">
               <div>
                 <input
+                  v-model="password"
                   id="password"
                   class="g-input__input"
                   type="password"
@@ -54,14 +58,7 @@
                 />
               </div>
             </div>
-            <div
-              type="button"
-              @click="
-                () => {
-                  close();
-                }
-              "
-            >
+            <div type="button" @click="close">
               Уже есть аккаунт!? Авторизируйтесь.
             </div>
             <div class="registr-butten-style">
@@ -69,12 +66,7 @@
                 type="submit"
                 value="Send"
                 class="b-auth-email__registration-button"
-                @click="
-                  () => {
-                    postUser();
-                    close();
-                  }
-                "
+                @click="close"
               >
                 ЗАРЕГИСТРИРОВАТЬСЯ
               </button>

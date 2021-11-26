@@ -14,7 +14,5 @@ export default class CardsGallery extends Vue {
   @cards.Getter private itemsPerPage!: CardValue[];
   async mounted(): Promise<void> {
     await this.$store.dispatch("cards/loadData");
-
-    // console.log(this.$store);
   }
 }
