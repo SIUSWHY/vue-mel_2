@@ -7,4 +7,7 @@ export const actions: ActionTree<BlogState, RootState> = {
     const { data: cards } = await cardsApi.getCards();
     commit("getPosts", cards);
   },
+  setPage({ commit }, page) {
+    commit("setPage", page);
+  },
 };

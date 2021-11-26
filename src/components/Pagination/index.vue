@@ -1,7 +1,7 @@
 <template>
   <div style="background-color: #f2f2f2">
     <sliding-pagination
-      :current="currentPage"
+      :current="page"
       :total="totalPages"
       @page-change="pageChangeHandler"
     />
