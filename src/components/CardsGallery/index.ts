@@ -12,7 +12,9 @@ const cards = namespace("cards");
 })
 export default class CardsGallery extends Vue {
   @cards.Getter private itemsPerPage!: CardValue[];
-  async mounted(): Promise<void> {
-    await this.$store.dispatch("cards/loadData");
+  @cards.Action private loadData!: () => Promise<void>;
+
+  mounted(): void {
+    this.loadData();
   }
 }

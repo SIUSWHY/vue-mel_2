@@ -61,7 +61,15 @@ async function run() {
 
   //get cards
   app.get('/cards', async (req, res) => {
-    const cards = await Cards.find()
+    const {
+      query: { search }
+    } = req
+
+    const query = {}
+
+    // $or
+
+    const cards = await Cards.find(query)
     if (req.query.sort) {
       const key = req.query.sort
 
