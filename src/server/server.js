@@ -67,7 +67,11 @@ async function run() {
 
     const query = {}
 
-    // $or
+    if (search) {
+      const regexp = new RegExp(search, 'gi')
+
+      query.$or = [{ title: regexp }, { text: regexp }]
+    }
 
     const cards = await Cards.find(query)
     if (req.query.sort) {

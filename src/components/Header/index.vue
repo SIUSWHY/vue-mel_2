@@ -12,7 +12,14 @@
       </div>
       <div class="l-nav-b_position">
         <div>
-          <input class="search-b" type="text" placeholder="  Ищите статью?" />
+          <input
+            class="search-b"
+            v-model="searchParams"
+            id="searchParams"
+            type="text"
+            placeholder="  Ищите статью?"
+          />
+          <button @click="takeParams()">Search</button>
         </div>
         <a class="type-list-right-menu">НАПИСАТЬ В БЛОГ </a>
         <button class="si-up_b-style" type="button" @click="showModal">

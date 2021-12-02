@@ -3,8 +3,8 @@ import { ActionTree } from "vuex";
 import { BlogState, RootState } from "../types";
 
 export const actions: ActionTree<BlogState, RootState> = {
-  async loadData({ commit }) {
-    const { data: cards } = await cardsApi.getCards();
+  async loadData({ commit }, search?: string) {
+    const { data: cards } = await cardsApi.getCards(search);
     commit("getPosts", cards);
   },
   setPage({ commit }, page) {
