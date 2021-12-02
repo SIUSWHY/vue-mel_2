@@ -5,9 +5,8 @@
         <nav>
           <ul class="menu_list">
             <li class="active">Тексты</li>
-            <li>Рассылки</li>
-            <div class="podcast-btn">Подкасты</div>
           </ul>
+          <SortButton />
         </nav>
       </div>
       <div class="l-nav-b_position">
