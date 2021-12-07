@@ -62,22 +62,19 @@ async function run() {
   //get cards
   app.get('/cards', async (req, res) => {
     const {
-      query: { search }
+      query: { search, sort }
     } = req
 
     const query = {}
 
     if (search) {
       const regexp = new RegExp(search, 'gi')
-
       query.$or = [{ title: regexp }, { text: regexp }]
     }
 
     const cards = await Cards.find(query)
-    if (req.query.sort) {
-      const key = req.query.sort
-
-      cards.sort((item1, item2) => (item1[key] > item2[key] ? -1 : 1))
+    if (sort) {
+      cards.sort((item1, item2) => (item1[sort] > item2[sort] ? -1 : 1))
     }
     res.send(cards)
   })

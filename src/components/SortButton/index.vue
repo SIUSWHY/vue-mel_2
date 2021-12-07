@@ -1,7 +1,7 @@
 <template>
-  <select class="sort-button" id="onSort" onchange="onSort(event)">
-    <option value="default">Sort</option>
-    <option value="viewCount">Popular</option>
+  <select class="sort-button" id="onSort" @change="onChangeSort">
+    <option value="viewCount">Likes</option>
+    <option value="commentCount">Comments</option>
     <option value="newDate">Date</option>
   </select>
 </template>

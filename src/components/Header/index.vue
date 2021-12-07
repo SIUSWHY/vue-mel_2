@@ -6,7 +6,7 @@
           <ul class="menu_list">
             <li class="active">Тексты</li>
           </ul>
-          <SortButton />
+          <SortButton @onSort="onSortChanged" />
         </nav>
       </div>
       <div class="l-nav-b_position">

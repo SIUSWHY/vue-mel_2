@@ -13,9 +13,18 @@ const cards = namespace("cards");
 })
 export default class Header extends Vue {
   private searchParams = "";
+  private sortParam = "";
   private isModalVisible = false;
+
+  private mounted() {
+    this.takeParams();
+  }
+
   private takeParams() {
-    this.loadData(this.searchParams);
+    this.loadData({
+      search: this.searchParams,
+      sort: this.sortParam,
+    });
   }
   private showModal() {
     this.isModalVisible = true;
@@ -23,5 +32,13 @@ export default class Header extends Vue {
   private closeModal() {
     this.isModalVisible = false;
   }
-  @cards.Action private loadData!: (search?: string) => Promise<void>;
+  private onSortChanged(sort: string) {
+    this.sortParam = sort;
+    this.takeParams();
+  }
+
+  @cards.Action private loadData!: (
+    search?: string,
+    sort?: string
+  ) => Promise<void>;
 }
